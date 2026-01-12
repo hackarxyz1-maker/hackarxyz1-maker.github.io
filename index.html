@@ -1,128 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Free Online Tools</title>
-  <meta name="description" content="Free online tools for students, bloggers, writers, and digital marketers. Fast, simple, and accurate tools.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WordCount Pro - Free Online Word & Character Counter</title>
+    <meta name="description" content="Free online word counter tool. Calculate words, characters, reading time (200 WPM), and speaking time (130 WPM). Fast, secure, and mobile-friendly.">
+    <style>
+        :root {
+            --primary: #007bff;
+            --bg: #f8f9fa;
+            --text: #333;
+            --card-bg: #ffffff;
+        }
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      padding: 16px;
-      max-width: 900px;
-      margin: auto;
-      background: #ffffff;
-      color: #111;
-    }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--bg); color: var(--text); margin: 0; padding: 0; line-height: 1.6; }
+        
+        /* Navbar */
+        nav { background: white; padding: 15px 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.2rem; font-weight: bold; color: var(--primary); display: flex; align-items: center; gap: 8px; }
+        
+        /* Main Layout */
+        .container { max-width: 800px; margin: 30px auto; padding: 0 15px; }
 
-    h1 {
-      color: #000000;
-    }
+        /* Tool Area */
+        .tool-card { background: var(--card-bg); padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        textarea { width: 100%; height: 200px; padding: 15px; border: 1px solid #ddd; border-radius: 8px; font-size: 16px; resize: vertical; box-sizing: border-box; font-family: inherit; }
+        textarea:focus { outline: 2px solid var(--primary); border-color: transparent; }
 
-    h2 {
-      margin-top: 28px;
-    }
+        /* Stats Grid */
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin-top: 20px; }
+        .stat-box { background: #f1f5f9; padding: 15px; border-radius: 8px; text-align: center; }
+        .stat-number { font-size: 24px; font-weight: bold; color: var(--primary); display: block; }
+        .stat-label { font-size: 14px; color: #666; }
 
-    /* Sirf Available Tools heading ke liye */
-    .tools-heading {
-      color: #2563eb; /* Blue */
-    }
+        /* Detailed Metrics (Reading Time) */
+        .metrics-box { margin-top: 20px; padding-top: 20px; border-top: 1px solid #eee; display: flex; justify-content: space-around; flex-wrap: wrap; gap: 10px; }
+        .metric { font-size: 14px; color: #555; }
+        .metric b { color: #333; }
 
-    ul {
-      padding-left: 20px;
-    }
+        /* SEO Content Section */
+        .content-section { margin-top: 40px; background: white; padding: 30px; border-radius: 12px; }
+        h2 { font-size: 1.2rem; color: #2c3e50; margin-top: 25px; }
+        p { color: #555; font-size: 0.95rem; }
 
-    a {
-      color: #1a73e8;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    footer {
-      margin-top: 30px;
-      font-size: 14px;
-    }
-  </style>
+        /* Footer */
+        footer { text-align: center; padding: 30px; margin-top: 50px; color: #666; font-size: 0.9rem; border-top: 1px solid #ddd; }
+        footer a { color: var(--primary); text-decoration: none; margin: 0 10px; }
+    </style>
 </head>
-
 <body>
-<header>
-  <div class="logo">
-    ✒️ <span>WordCount Pro</span>
-  </div>
 
-  <div class="dark-icon">
-    🌙
-  </div>
-</header>
+    <nav>
+        <div class="logo">
+            <span>✒️ WordCount Pro</span>
+        </div>
+        <div style="cursor:pointer; font-size:1.2rem;">🌙</div>
+    </nav>
 
-  <h1>Free Online Tools</h1>
+    <div class="container">
+        
+        <div class="tool-card">
+            <textarea id="inputText" placeholder="Type or paste your text here to begin counting..."></textarea>
+            
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <span id="wordCount" class="stat-number">0</span>
+                    <span class="stat-label">Words</span>
+                </div>
+                <div class="stat-box">
+                    <span id="charCount" class="stat-number">0</span>
+                    <span class="stat-label">Characters</span>
+                </div>
+                <div class="stat-box">
+                    <span id="charNoSpaceCount" class="stat-number">0</span>
+                    <span class="stat-label">Chars (no spaces)</span>
+                </div>
+            </div>
 
-  <p>
-    Welcome to our free online tools website. This platform is designed to help students,
-    bloggers, writers, and digital marketers with useful and easy-to-use online tools.
-    Our goal is to provide high-quality tools that improve productivity and save time.
-  </p>
+            <div class="metrics-box">
+                <span class="metric">📖 Reading Time: <b id="readTime">0 min</b></span>
+                <span class="metric">🗣️ Speaking Time: <b id="speakTime">0 min</b></span>
+            </div>
+        </div>
 
-  <h2>Why Choose Our Free Online Tools?</h2>
-  <p>
-    Our website offers fast, reliable, and easy-to-use online tools that help users complete
-    everyday tasks efficiently. All tools are browser-based, require no installation,
-    and work smoothly on mobile and desktop devices.
-  </p>
+        <div class="content-section">
+            <h2>Does it count spaces as characters?</h2>
+            <p>We provide both metrics. The main "Characters" card includes spaces, while the detailed metrics section shows "Characters (no spaces)". This is useful for social media posts like X (Twitter) or SMS limits.</p>
 
-  <h2>Who Can Use These Tools?</h2>
-  <ul>
-    <li>Students working on assignments and projects</li>
-    <li>Bloggers and content writers</li>
-    <li>SEO professionals and digital marketers</li>
-    <li>Social media managers</li>
-    <li>Anyone who needs quick and accurate text analysis</li>
-  </ul>
+            <h2>How is reading time calculated?</h2>
+            <p>We use the industry standard of <strong>200 words per minute (WPM)</strong> for reading time and <strong>130 WPM</strong> for speaking time. This helps content creators estimate how long their script or blog post will take to consume.</p>
 
-  <h2>Our Mission</h2>
-  <p>
-    Our mission is to provide high-quality, free online tools that improve productivity
-    and save time. We focus on accuracy, simplicity, and user privacy while continuously
-    improving our platform.
-  </p>
+            <h2>Is this tool free to use?</h2>
+            <p>Yes, WordCount Pro is completely free for unlimited use without any hidden costs or subscription requirements. Everything works in your browser for maximum privacy.</p>
+            
+            <h2>Why use an online word counter?</h2>
+            <p>Whether you are a student writing an essay, a copywriter working on a headline, or a social media manager crafting the perfect caption, staying within character limits is crucial. Our tool helps you track these metrics instantly.</p>
+        </div>
 
-  <!-- 👇 COLOR CHANGE YAHI HAI -->
-  <h2 class="tools-heading">Available Tools</h2>
+    </div>
 
-  <ul>
-    <li>
-      <a href="/word-counter-tool/">Word Counter Tool</a>
-      – Count words, characters, and reading time instantly.
-    </li>
-  </ul>
+    <footer>
+        <p>&copy; 2026 WordCount Pro. All rights reserved.</p>
+        <br>
+        <a href="about.html">About</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="contact.html">Contact</a>
+    </footer>
 
-  <p>
-    We believe in simplicity and accuracy. All tools available on this website are completely
-    free to use and do not require any registration. Whether you are counting words, checking
-    text length, or using SEO-related utilities, our tools are optimized for fast performance.
-  </p>
+    <script>
+        const input = document.getElementById('inputText');
+        const wordDisplay = document.getElementById('wordCount');
+        const charDisplay = document.getElementById('charCount');
+        const charNoSpaceDisplay = document.getElementById('charNoSpaceCount');
+        const readTimeDisplay = document.getElementById('readTime');
+        const speakTimeDisplay = document.getElementById('speakTime');
 
-  <p>
-    This website is regularly updated with new tools and improvements. We focus on user
-    experience, clean design, and accurate results. If you have any suggestions or feedback,
-    feel free to contact us through our contact page.
-  </p>
+        input.addEventListener('input', function() {
+            let text = this.value;
 
-  <hr>
+            // 1. Character Count (with spaces)
+            charDisplay.innerText = text.length;
 
-  <footer>
-    <p>
-      <a href="./privacy-policy.html">Privacy Policy</a> |
-      <a href="./about.html">About Us</a> |
-      <a href="./contact.html">Contact Us</a>
-    </p>
-  </footer>
+            // 2. Character Count (no spaces)
+            charNoSpaceDisplay.innerText = text.replace(/\s/g, '').length;
+
+            // 3. Word Count
+            let words = text.trim().split(/\s+/).filter(word => word.length > 0);
+            let wordCount = words.length;
+            wordDisplay.innerText = wordCount;
+
+            // 4. Reading Time (200 WPM)
+            let readMinutes = Math.ceil(wordCount / 200);
+            readTimeDisplay.innerText = readMinutes + (readMinutes === 1 ? " min" : " mins");
+
+            // 5. Speaking Time (130 WPM)
+            let speakMinutes = Math.ceil(wordCount / 130);
+            speakTimeDisplay.innerText = speakMinutes + (speakMinutes === 1 ? " min" : " mins");
+        });
+    </script>
 
 </body>
 </html>
