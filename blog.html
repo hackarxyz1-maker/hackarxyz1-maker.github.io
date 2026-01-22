@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - WordCount Pro Writing Tips</title>
+    <meta name="description" content="Read the latest tips on writing, SEO, character limits for social media, and content strategy from WordCount Pro.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Reuse styles from index.html for consistency */
+        :root { --primary: #3b82f6; --bg-body: #f1f5f9; --text-main: #1e293b; --bg-card: #ffffff; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg-body); color: var(--text-main); margin: 0; padding-bottom: 40px; }
+        
+        /* Navbar */
+        header { background: var(--bg-card); padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e2e8f0; }
+        .brand { font-weight: bold; font-size: 1.2rem; color: var(--primary); text-decoration: none; display: flex; gap: 10px; align-items: center; }
+        nav ul { display: flex; gap: 20px; list-style: none; margin: 0; padding: 0; }
+        nav a { text-decoration: none; color: var(--text-main); font-weight: 600; }
+        nav a:hover { color: var(--primary); }
+
+        /* Blog Layout */
+        .container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+        .page-title { text-align: center; margin-bottom: 40px; }
+        .page-title h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .page-title p { color: #64748b; }
+
+        .blog-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            transition: transform 0.2s;
+            border: 1px solid #e2e8f0;
+        }
+        .blog-card:hover { transform: translateY(-5px); }
+        .card-content { padding: 25px; }
+        .tag { background: #e0f2fe; color: #0284c7; padding: 5px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; display: inline-block; margin-bottom: 15px; }
+        .blog-card h2 { margin: 0 0 10px 0; font-size: 1.5rem; }
+        .blog-card h2 a { text-decoration: none; color: var(--text-main); }
+        .blog-card p { color: #64748b; line-height: 1.6; margin-bottom: 20px; }
+        .read-more { color: var(--primary); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 5px; }
+        
+        /* Footer */
+        footer { text-align: center; margin-top: 50px; color: #64748b; padding: 20px; border-top: 1px solid #e2e8f0; background: white; }
+        footer a { color: var(--primary); text-decoration: none; margin: 0 10px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="brand"><i class="fa-solid fa-pen-nib"></i> WordCount Pro</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html" style="color: var(--primary);">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="page-title">
+            <h1>Writing & SEO Blog</h1>
+            <p>Tips to improve your content, ranking, and writing speed.</p>
+        </div>
+
+        <article class="blog-card">
+            <div class="card-content">
+                <span class="tag">SEO Tips</span>
+                <h2><a href="seo-guide.html">Why Word Count Matters for SEO in 2026</a></h2>
+                <p>Does Google prefer long articles or short ones? Learn how article length impacts your search engine ranking and what the perfect word count is for your niche.</p>
+                <a href="seo-guide.html" class="read-more">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </article>
+
+        <article class="blog-card">
+            <div class="card-content">
+                <span class="tag">Social Media</span>
+                <h2><a href="#">The Ultimate Guide to Social Media Character Limits</a></h2>
+                <p>Coming Soon: A complete breakdown of character limits for Instagram, Twitter (X), LinkedIn, and Facebook to ensure your posts never get cut off.</p>
+                <a href="#" class="read-more">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </article>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 WordCount Pro.</p>
+        <a href="index.html">Home</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+    </footer>
+
+</body>
+</html>
