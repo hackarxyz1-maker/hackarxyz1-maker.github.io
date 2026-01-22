@@ -304,12 +304,14 @@
         }
         footer p { color: var(--text-muted); margin-bottom: 15px; }
         footer a {
-            color: var(--primary);
-            text-decoration: none;
-            margin: 0 10px;
-            font-weight: 600;
-            font-size: 0.95rem;
-        }
+    color: var(--primary);
+    text-decoration: none;
+    margin: 8px 12px;  /* Upar-Niche gap bhi de diya */
+    font-weight: 600;
+    font-size: 0.95rem; /* Mobile ke liye font thoda chhota */
+    display: inline-block; /* Isse buttons agli line mein sahi se set honge */
+}
+
         footer a:hover { color: var(--primary-dark); text-decoration: underline; }
     </style>
 </head>
