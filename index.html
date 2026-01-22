@@ -75,6 +75,32 @@
             box-shadow: var(--shadow);
             border-bottom: 1px solid var(--border);
         }
+     /* Navigation Styles - Paste at Line 78 */
+    nav {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+    }
+    
+    .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+        padding-right: 20px;
+        margin: 0;
+    }
+    
+    .nav-links li a {
+        text-decoration: none;
+        color: var(--text-main);
+        font-weight: bold;
+        font-size: 1rem;
+    }
+    
+    .nav-links li a:hover {
+        color: #3b82f6;
+    }
+
 
         .brand {
             display: flex;
@@ -264,6 +290,14 @@
         <div class="brand">
             <i class="fa-solid fa-pen-nib"></i> WordCount Pro
         </div>
+                <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
         <button class="theme-toggle" id="themeToggle" aria-label="Toggle Dark Mode">
             <i class="fa-solid fa-moon"></i>
         </button>
