@@ -1,86 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact WordCount Pro for support, feedback, or business inquiries. We are happy to help." />
   <title>Contact Us - WordCount Pro</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Contact WordCount Pro for support, feedback, or business inquiries.">
   <style>
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: #f5f7fb;
-      color: #333;
-    }
-    .container {
-      max-width: 800px;
-      margin: 40px auto;
-      background: #ffffff;
-      padding: 24px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
-    h1 {
-      text-align: center;
-      margin-bottom: 16px;
-    }
-    p {
-      line-height: 1.6;
-      font-size: 0.95rem;
-    }
-    .email-box {
-      margin-top: 20px;
-      padding: 16px;
-      background: #f0f3ff;
-      border-radius: 8px;
-      text-align: center;
-      font-weight: 600;
-    }
-    footer {
-      margin-top: 30px;
-      text-align: center;
-      font-size: 0.8rem;
-      color: #666;
-    }
-    footer a {
-      color: #4a63ff;
-      text-decoration: none;
-      margin: 0 6px;
-    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: #f8fafc; color: #1e293b; line-height: 1.7; }
+    header { background: #fff; border-bottom: 1px solid #e2e8f0; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 10; box-shadow: 0 1px 4px rgba(0,0,0,.06); }
+    .logo { font-size: 1.3rem; font-weight: 800; color: #3b82f6; text-decoration: none; letter-spacing: -.5px; }
+    nav a { color: #475569; text-decoration: none; font-size: .93rem; font-weight: 500; margin-left: 20px; }
+    nav a:hover { color: #3b82f6; }
+    .container { max-width: 720px; margin: 48px auto; padding: 0 24px 80px; }
+    .breadcrumb { font-size: .82rem; color: #94a3b8; margin-bottom: 28px; }
+    .breadcrumb a { color: #3b82f6; text-decoration: none; }
+    h1 { font-size: 2rem; font-weight: 800; color: #0f172a; margin-bottom: 12px; }
+    p { margin-bottom: 14px; color: #374151; font-size: .97rem; }
+    .contact-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 32px; margin: 32px 0; box-shadow: 0 1px 6px rgba(0,0,0,.06); }
+    .contact-card h2 { font-size: 1.1rem; font-weight: 700; color: #0f172a; margin-bottom: 16px; }
+    .contact-item { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 20px; }
+    .contact-item:last-child { margin-bottom: 0; }
+    .icon { font-size: 1.4rem; margin-top: 2px; }
+    .contact-item strong { display: block; font-size: .9rem; color: #64748b; margin-bottom: 2px; }
+    .contact-item a { color: #3b82f6; text-decoration: none; font-size: 1rem; font-weight: 600; }
+    .contact-item a:hover { text-decoration: underline; }
+    .contact-item p { margin: 0; font-size: .9rem; color: #64748b; }
+    .topics { background: #eff6ff; border-radius: 10px; padding: 20px 24px; margin: 28px 0; }
+    .topics h3 { font-size: .95rem; font-weight: 700; color: #1e40af; margin-bottom: 10px; }
+    .topics ul { margin-left: 18px; }
+    .topics ul li { color: #1e40af; font-size: .9rem; margin-bottom: 5px; }
+    .response-note { background: #f0fdf4; border: 1px solid #86efac; border-radius: 8px; padding: 14px 18px; font-size: .88rem; color: #166534; margin-top: 8px; }
+    footer { background: #1e293b; color: #94a3b8; text-align: center; padding: 24px; font-size: .85rem; }
+    footer a { color: #60a5fa; text-decoration: none; margin: 0 10px; }
+    footer a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <h1>Contact Us</h1>
+<header>
+  <a class="logo" href="https://wordcountpro.in/index.html">WordCount Pro</a>
+  <nav>
+    <a href="https://wordcountpro.in/index.html">Home</a>
+    <a href="https://wordcountpro.in/blog.html">Blog</a>
+    <a href="https://wordcountpro.in/contact.html">Contact</a>
+  </nav>
+</header>
 
-    <p>
-      If you have any questions, suggestions, feedback, or business inquiries related to
-      <strong>WordCount Pro</strong>, feel free to contact us. We are always happy to hear from our users.
-    </p>
+<div class="container">
+  <div class="breadcrumb">
+    <a href="https://wordcountpro.in/index.html">Home</a> › Contact Us
+  </div>
 
-    <p>
-      Whether you are facing an issue with our word counter tool or want to share an improvement idea,
-      you can reach us through the email address below.
-    </p>
+  <h1>Contact Us</h1>
+  <p>Have a question, found a bug, or want to share feedback about <strong>WordCount Pro</strong>? We would love to hear from you. Reach out using any of the methods below and we will get back to you as soon as possible.</p>
 
-    <div class="email-box">
-      📧 Email: ankitsahu45434@gmail.com
+  <div class="contact-card">
+    <h2>Get in Touch</h2>
+
+    <div class="contact-item">
+      <span class="icon">📧</span>
+      <div>
+        <strong>Email Address</strong>
+        <a href="mailto:ankitsahu45434@gmail.com">ankitsahu45434@gmail.com</a>
+        <p>Best for support, feedback, and business inquiries</p>
+      </div>
     </div>
 
-    <p style="margin-top: 20px;">
-      We aim to respond to all genuine inquiries as soon as possible.
-    </p>
+    <div class="contact-item">
+      <span class="icon">🌐</span>
+      <div>
+        <strong>Website</strong>
+        <a href="https://wordcountpro.in">wordcountpro.in</a>
+        <p>Free online word &amp; character counter tool</p>
+      </div>
+    </div>
 
-    <footer>
-      <p>© 2024 WordCount Pro. All rights reserved.</p>
-      <p>
-        <a href="index.html">Home</a> |
-        <a href="about.html">About</a> |
-        <a href="privacy-policy.html">Privacy Policy</a>
-      </p>
-    </footer>
+    <div class="contact-item">
+      <span class="icon">📍</span>
+      <div>
+        <strong>Location</strong>
+        <span style="font-size:1rem; font-weight:600; color:#1e293b;">India</span>
+        <p>Serving users globally</p>
+      </div>
+    </div>
+
+    <div class="response-note">
+      ✅ We typically respond to all genuine inquiries within <strong>24–48 hours</strong>. Please include as much detail as possible so we can help you effectively.
+    </div>
   </div>
+
+  <div class="topics">
+    <h3>You can contact us about:</h3>
+    <ul>
+      <li>Bug reports or technical issues with the tool</li>
+      <li>Feature suggestions or improvement ideas</li>
+      <li>General feedback about your experience</li>
+      <li>Privacy or data-related questions</li>
+      <li>Business or collaboration inquiries</li>
+      <li>Advertising or sponsorship opportunities</li>
+    </ul>
+  </div>
+
+  <p>For questions about how we handle data and cookies, please review our <a href="https://wordcountpro.in/privacy-policy.html">Privacy Policy</a> and <a href="https://wordcountpro.in/cookies.html">Cookie Policy</a> first — your question may already be answered there.</p>
+</div>
+
+<footer>
+  <p>© 2026 WordCount Pro. All rights reserved.</p>
+  <p style="margin-top:10px;">
+    <a href="https://wordcountpro.in/index.html">Home</a>
+    <a href="https://wordcountpro.in/about.html">About Us</a>
+    <a href="https://wordcountpro.in/privacy-policy.html">Privacy Policy</a>
+    <a href="https://wordcountpro.in/cookies.html">Cookie Policy</a>
+    <a href="https://wordcountpro.in/contact.html">Contact Us</a>
+  </p>
+</footer>
 
 </body>
 </html>
